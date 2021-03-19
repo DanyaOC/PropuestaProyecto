@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login4">
+    <fragment
+        android:id="@+id/login4"
+        android:name="edu.itesm.propuestaproyecto.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login4_to_perfil2"
+            app:destination="@id/perfil2" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfil2"
+        android:name="edu.itesm.propuestaproyecto.Perfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_perfil2_to_traductor"
+            app:destination="@id/traductor" />
+        <action
+            android:id="@+id/action_perfil2_to_curso"
+            app:destination="@id/curso" />
+    </fragment>
+    <fragment
+        android:id="@+id/traductor"
+        android:name="edu.itesm.propuestaproyecto.Traductor"
+        android:label="fragment_traductor"
+        tools:layout="@layout/fragment_traductor" />
+    <fragment
+        android:id="@+id/curso"
+        android:name="edu.itesm.propuestaproyecto.Curso"
+        android:label="fragment_curso"
+        tools:layout="@layout/fragment_curso" >
+        <action
+            android:id="@+id/action_curso_to_nivel1"
+            app:destination="@id/nivel1" />
+    </fragment>
+    <fragment
+        android:id="@+id/nivel1"
+        android:name="edu.itesm.propuestaproyecto.Nivel1"
+        android:label="fragment_nivel1"
+        tools:layout="@layout/fragment_nivel1" />
+</navigation>
